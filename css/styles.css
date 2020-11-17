@@ -153,9 +153,26 @@ p {
     width: 11px;
     height: 11px;
     fill: #000000;
-    
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.close:hover .modal-botton-icon,
+.close:focus .modal-botton-icon {
+    fill: var(--accent-color);
+}
+
+
+.btn-form{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-right: 55px;
+    padding-left: 55px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 
  /* стилі для лого*/
  .logo {
@@ -292,6 +309,7 @@ li > .current {
 
 .social-network-title {
     color: var(--title-page-color);
+    margin-bottom: 20px;
 }
 
 
@@ -766,4 +784,113 @@ background-image: url(../images/antenna-1.svg);
      width: 20px;
      height: 20px;
      fill: var(--title-page-color);
+}
+
+.footer-form {
+    min-width: 570px;
+    margin-left: 23px;
+}
+
+
+.footer-email-form input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: inherit;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    padding: 15px 16px;
+    margin-right: 12px;
+}
+.footer-email {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-email-form input {
+    color: var(--title-page-color);
+}
+
+.footer-email-form input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* овормлення форм */
+/* модальне вікно */
+
+/* .modal-form{
+    margin-top: 40px;
+    margin-left: 40px;
+} */
+
+.modal-form-title {
+    padding: 40px 40px 12px 40px;
+    
+    font-size: 20px;
+    line-height: 1.17;
+   
+    color: var(--title-text-color);
+    text-align: center;
+}
+
+.form {
+    max-height: 342px;
+    padding-left: 35px;
+    padding-right: 45px;
+}
+
+.form-field {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field input,
+.form-field textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+   
+}
+
+.form-field input {
+    height: 40px;
+}
+
+.form-field label {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    
+}
+
+.form-field textarea {
+    padding: 12px 16px -12px 16px ;
+}
+
+.form-field textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field textarea {
+    height: 120px;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-checkbox {
+    padding: 10px 11px 10px 12px;
+    margin-bottom: 20px;
 }
