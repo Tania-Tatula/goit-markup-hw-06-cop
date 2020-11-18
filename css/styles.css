@@ -823,10 +823,10 @@ background-image: url(../images/antenna-1.svg);
 /* овормлення форм */
 /* модальне вікно */
 
-/* .modal-form{
-    margin-top: 40px;
-    margin-left: 40px;
-} */
+.form-input {
+    margin: 0;
+    font: inherit;    
+}
 
 .modal-form-title {
     padding: 40px 40px 12px 40px;
@@ -845,15 +845,21 @@ background-image: url(../images/antenna-1.svg);
 }
 
 .form-field {
-    margin-bottom: 10px;
+    position: relative;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .form-field input,
 .form-field textarea {
+    width: 100%;
+    margin: 0;
+    padding: 12px 12px 12px 42px;
+    font: inherit;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
    
 }
 
@@ -893,4 +899,37 @@ textarea {
 .form-checkbox {
     padding: 10px 11px 10px 12px;
     margin-bottom: 20px;
+}
+
+.form-icon{
+    position: absolute;
+    top: 27px;
+    left: 12px;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    
+}
+
+.form-icon-svg{
+    width: 12px;
+    height: 12px;
+
+    fill: var(--title-text-color);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus .form-icon-svg {
+    fill: var(--accent-color);
+}
+
+
+.form-input:focus {
+    border-color: var(--accent-color);
 }
